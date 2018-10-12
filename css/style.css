@@ -1,0 +1,276 @@
+/*--------font--------*/
+	        @import url(https://fonts.googleapis.com/css?family=Roboto);
+	        @import url(https://fonts.googleapis.com/css?family=Montserrat);
+        /*--------//font--------*/
+        /*--------Body-------*/
+	        body {
+	        margin: 0;
+	        -webkit-box-sizing: border-box;
+	        -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+	        background: #fafafa;
+	        font-family: "Montserrat","Roboto", sans-serif;
+	        position: relative;
+	        }
+        /*--------//Body--------*/
+        /*-------header--------*/
+	        #head{
+	        	width: 100%;
+	        }
+	        .title{
+	        	background: #333;
+			    color: white;
+			    padding: 0;
+			    margin: 0;
+	        }
+	        	.title h1{
+			   	padding: 20px;
+				text-align-last: center;
+				margin: 0;
+				height: 50px;
+			    }
+
+	    	/*TOPMENUここから*/
+		        nav {
+		            list-style: none;
+		            overflow: hidden;
+		        }
+
+		        nav a{
+		        	text-decoration: none;
+		        	color: white;
+		        }
+
+		        .top-nav{
+		        	position: sticky;
+		        	top: 0px;
+		        }
+
+		        .topnav-menu, .topnav-menu-list {
+		        list-style: none;
+		        padding-left: 0;
+		        margin: 0;
+		        }
+
+		        .topnav-menu-list, .topnav-menu-col {
+		        -webkit-transition: 0.25s ease-in;
+		        -moz-transition: 0.25s ease-in;
+		        -ms-transition: 0.25s ease-in;
+		        -o-transition: 0.25s ease-in;
+		        transition: 0.25s ease-in;
+		        }
+
+		        .topnav-menu-content:hover + .topnav-menu-list, .topnav-menu-list:hover {
+		        opacity: 1;
+		        z-index: 1;
+		        }
+
+		        .topnav-menu {
+		        color: #f8f8f8;
+		        background: #585858;
+		        }
+		        .topnav-menu:after {
+		        content: "";
+		        clear: both;
+		        display: block;
+		        }
+		        .topnav-menu-case {
+		        float: left;
+		        padding-left: 15px;
+		        padding-right: 15px;
+		        }
+		        .topnav-menu-case:hover .topnav-menu-col {
+		        color: #507ea4;
+		        }
+		        .topnav-menu-col {
+		        padding: 0.5em 0.8em;
+		        cursor: default;
+		        }
+		        .topnav-menu-list {
+		        opacity: 0;
+		        z-index: -1;
+		        position: absolute;
+		        border-top: 1px solid #666;
+		        width: 10em;
+		        background: #585858;
+		        -webkit-box-shadow: 0 1px 4px -2px #666;
+		        -moz-box-shadow: 0 1px 4px -2px #666;
+		        box-shadow: 0 1px 4px -2px #666;
+		        }
+		        .topnav-menu-content {
+		        padding: 0.3em 0.5em;
+		        cursor: pointer;
+		        }
+		        .topnav-menu-content a{
+		            color:white;
+		        }
+		        .topnav-menu-content:hover {
+		        background: #507ea4;
+		        }
+		        .sp-nav{
+		        	display: none;
+		        }
+		        #select{
+		        	width: 100%;
+				    background: #333;
+				    color: white;
+				    padding: 15px;
+				    font-size: 100%;
+		        }
+		        @media screen and (max-width: 768px){
+		        	.sp-nav{
+		        		width:100%;
+		        		display: block!important;
+		        		position: sticky;
+		        		top: 0;
+		        	}
+		        	.top-nav{
+		        		display: none!important;
+		        	}
+		        }
+	    	/*TOPMENUここまで(あとで書き換える)*/
+    	/*--------//header--------*/
+    /*コンテンツここから*/
+	    #contents{
+	    	/*min-height:1000px;*/
+	    	margin: 0 auto;
+	    	margin-bottom: 100px;
+	    	width: 70%;
+	    	height: 100%;
+	    	overflow: hidden;
+	    }
+
+	        /*見出し*/
+	        .md{
+	        	padding-top: 15px;
+	        }
+
+	        /*動作確認用余白*/
+	        #yohaku{
+	            height: 200px;
+	        }
+	        
+	        /*アクセスカウンタークレジット*/
+	        .credit{
+	        	font-size: 8px;
+	        }
+
+	        /*サイドバー内Twitter*/
+	        #twitter-tl{
+	            width:250px;
+	        }
+	        /*もしかしたら実装するかもしれないTOPへ戻るボタン*/
+	        #gotop{
+	        	position: fixed;
+	        	bottom: 50px;
+	        	right: 20px;
+	        	display: block;
+	        }
+	        /*----Table----*/
+		        /*メンバー表*/
+		        table.membar {
+					border-collapse: collapse;
+					text-align: left;
+					line-height: 1.5;
+					border: 1px solid #ccc;
+					width: 100%;
+				}
+				table.membar thead {
+					border-right: 1px solid #ccc;
+					border-left: 1px solid #ccc;
+					background: #333;
+				}
+				table.membar thead th {
+					padding: 10px;
+					font-weight: bold;
+					vertical-align: top;
+					color: #fff;
+				}
+				table.membar tbody th {
+					width: 150px;
+					padding: 10px;
+					font-weight: bold;
+					vertical-align: top;
+					border-bottom: 1px solid #ccc;
+					background: #efefef;
+				}
+				table.membar td {
+					width: 350px;
+					padding: 10px;
+					vertical-align: top;
+					border-bottom: 1px solid #ccc;
+				}
+				.scroll{
+				overflow: auto;　　　　/*tableをスクロールさせる*/
+				white-space: nowrap;　　/*tableのセル内にある文字の折り返しを禁止*/
+				}
+				.scroll::-webkit-scrollbar{　　/*tableにスクロールバーを追加*/
+				 height: 5px;
+				}
+				.scroll::-webkit-scrollbar-track{　　/*tableにスクロールバーを追加*/
+				 background: #F1F1F1;
+				}
+				.scroll::-webkit-scrollbar-thumb {　　/*tableにスクロールバーを追加*/
+				 background: #BCBCBC;
+				}
+			/*----//Table----*/
+			.rule{
+				list-style-type: decimal;/*li属性の・を算用数字に*/
+			}
+			@media screen and (max-width: 1024px){ /*1024pxで分岐*/
+				#twitter-tl{
+					width: auto;
+					max-width: 500px;
+				}
+				.md{
+					padding-top: 40px;
+				}
+			}
+	/*コンテンツここまで*/
+	    /*全般ここから*/
+	    	p{
+	            font-size: 14px;
+	            color: #333;
+	        }
+
+	        a{
+	            color: orange;
+	        }
+
+	        h2{
+	        	margin-bottom: 15px;
+			    border-bottom: #000000 1px dotted;
+			    color: #000000;
+			    font-size: 18px;
+			    font-weight: normal;
+	        }
+
+	        /*各見出し1文字目拡大*/
+	        h2:first-letter {
+	  			font-size: 26px;
+			}
+
+	        #main{
+	            float: left;
+	            width: 70%;
+	        }
+	        #side{
+	            float: right;
+	        }
+	        #footer{
+	        	position: relative;
+	        	font-size: 75%;
+	        	text-align: center;
+	        	overflow: hidden;
+	        	background: gray;
+	        }
+	        @media screen and (max-width: 1024px){ /*1024pxで分岐*/
+	        	#main{
+	        		width: 100%;
+	        	}
+	        	#side{
+	        		float: left;
+	        		width: 100%;
+	        	}
+	        }
+	    /*全般ここまで*/
