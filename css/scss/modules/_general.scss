@@ -1,0 +1,72 @@
+@font-face {
+  font-family: 'Mechanoarc';
+  src: url("./../font/Mechanoarc.otf") format('opentype');
+  src: url(./../font/Mechanoarc.otf) format('opentype');
+}
+@font-face{
+  font-family: 'HeadUpDaisy';
+  src: url("./../font/x14y24pxHeadUpDaisy.ttf") format('truetype');
+  src: url(./../font/x14y24pxHeadUpDaisy.ttf) format('truetype');
+}
+@font-face{
+  font-family: 'SmartFontUI';
+  src: url("./../font/SmartFontUI.ttf") format('truetype');
+  src: url(./../font/SmartFontUI.ttf) format('truetype');
+}
+@keyframes fadeIn {
+  0% {opacity: 0}
+  100% {opacity: 1}
+}
+
+@-webkit-keyframes fadeIn {
+  0% {opacity: 0}
+  100% {opacity: 1}
+}
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  &:before, &:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+}
+html,body{
+  min-height:100vh;
+  height: 100%;
+  width: 100vw;
+  // overflow: hidden;
+  font-family: SmartFontUI, HeadUpDaisy;
+}
+img{
+  width: 100%;
+  max-width: 100%;
+}
+#canvas{
+  position: fixed;
+  top: 0;
+  left: 0;
+	width:100vw;
+  min-height:100vh;
+  height: 100%;
+  z-index: 1;
+}
+.canvas-body{
+  animation: fadeIn 2s ease 0s 1 normal;
+  position:absolute;
+  top: 25%;
+  left:0;
+  width: 100%;
+  z-index: 3;
+  @include tb{
+    top: 50px;
+  }
+  @include sp{
+    top: 15px;
+  }
+}

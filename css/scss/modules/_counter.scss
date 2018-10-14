@@ -1,0 +1,16 @@
+.counter{
+  width: 60%;
+  margin: 0 auto;
+  font-family: Mechanoarc,SmartFontUI;
+  text-align: center;
+  color: $main-color;
+  .counter-title{
+    font-size: 2em;
+    border-bottom: 5px solid $main-color;
+  }
+  .counter-body{
+    padding: 10px;
+    font-size: 23px;
+    letter-spacing: 2.2px;
+  }
+}

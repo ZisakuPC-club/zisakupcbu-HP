@@ -1,0 +1,27 @@
+$pc: 1025px; // PC
+$tb: 1024px; //タブレット
+$sp: 767px;  // スマホ
+$main-color: #fff;
+
+@mixin pc {
+  @media (min-width: ($pc)) {
+    @content;
+  }
+}
+@mixin tb{
+  @media (max-width: ($tb)) {
+    @content;
+  }
+}
+@mixin sp {
+  @media (max-width: ($sp)) {
+    @content;
+  }
+}
+
+@mixin border($color:#fff) {
+  border: 1px solid $color;
+}
+@mixin border-dot($color:#fff) {
+  border-bottom: 1px dotted $color;
+}

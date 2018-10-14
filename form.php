@@ -4,14 +4,14 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="説明やで">
+		<meta name="description" content="自作パソコン部公式サイトです。">
+		<meta name="keyword" content="自作パソコン,PC,パソコン,自作PC">
     <meta name="author" content="DAFU">
-    <link rel="icon" href="../../favicon.ico">
+    <link rel="icon" href="/img/favicon.ico">
     <link rel="stylesheet" href="/css/style.css">
     <title>応募フォーム|自作パソコン部</title>
-    <script src="/js/temp.js">
-  </head>
-
+		<script src="/js/temp.js">
+	</head>
   <body>
    <div id="head"></div>
       <div class="title">
@@ -31,38 +31,37 @@
                 <a href="/form.php"><button>リロード</button></a>
             </form>
         </div>
-<?php
+	<?php
 
-if($_SERVER["REQUEST_METHOD"] == "POST"){
-    writeData();
-}
+	if($_SERVER["REQUEST_METHOD"] == "POST"){
+			writeData();
+	}
 
 
-function writeData(){
-    $name = $_POST['personal_name'];
-    $user = $_POST['twitter'];
-    $skype = $_POST['skype'];
+	function writeData(){
+			$name = $_POST['personal_name'];
+			$user = $_POST['twitter'];
+			$skype = $_POST['skype'];
 
-    $data = $data."$name,$user,$skype"."\n";
-    $open_file = 'oubo.csv';
-    $fp = fopen($open_file, 'ab');
+			$data = $data."$name,$user,$skype\r\n";
+			$open_file = 'oubo.txt';
+			$fp = fopen($open_file, 'ab');
 
-    if ($fp){
-        if (flock($fp, LOCK_EX)){
-            if (fwrite($fp,  $data) === FALSE){
-                print('ファイル書き込みに失敗しました');
-            }
+			if ($fp){
+					if (flock($fp, LOCK_EX)){
+							if (fwrite($fp,  $data) === FALSE){
+									print('ファイル書き込みに失敗しました');
+							}
 
-            flock($fp, LOCK_UN);
-        }else{
-            print('ファイルロックに失敗しました');
-        }
-    }
+							flock($fp, LOCK_UN);
+					}else{
+							print('ファイルロックに失敗しました');
+					}
+			}
 
-    fclose($fp);
-}
+			fclose($fp);
+	}
 
-?>
-
- </body>
+	?>
+	</body>
 </html>

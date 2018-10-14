@@ -2,516 +2,198 @@
 <!DOCTYPE HTML>
 <html>
     <head>
-        <meta charset="UTF-8">
-        <meta lang="ja">
-        <meta name="author" content="DAFU">
-        <meta name="viewport" content="width=device-width">
-        <meta name="discription" content="自作パソコン部ですよ！">
-        <title>自作パソコン部</title>
-        <link rel="stylesheet" href="/css/style.css">
-        <link rel="stylesheet" href="/css/reset.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kikiriko200/8-Grid@v0.3/css/8grid.all.min.css">
-        <link href="https://fonts.googleapis.com/css?family=Montserrat|Roboto" rel="stylesheet">
-        <script type="text/javascript" src="/js/temp.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
-        <style>
-        /*----------
-        index→あてにならない
-        1.font
-        2.body
-        3.header
-        4.コンテンツ
-        5.main
-        6.side
-        7.footer
-        8.レスポンシブ設定
-        ---------*/
-        /*--------font--------*/
-	        @import url(https://fonts.googleapis.com/css?family=Roboto);
-	        @import url(https://fonts.googleapis.com/css?family=Montserrat);
-        /*--------//font--------*/
-        /*--------Body-------*/
-	        body {
-	        margin: 0;
-	        -webkit-box-sizing: border-box;
-	        -moz-box-sizing: border-box;
-	        box-sizing: border-box;
-	        background: #fafafa;
-	        font-family: "Montserrat","Roboto", sans-serif;
-	        position: relative;
-	        }
-        /*--------//Body--------*/
-        /*-------header--------*/
-	        #head{
-	        	width: 100%;
-	        }
-	        .title{
-	        	background: #333;
-			    color: white;
-			    padding: 0;
-			    margin: 0;
-	        }
-	        	.title h1{
-			   	padding: 20px;
-				text-align-last: center;
-				margin: 0;
-				height: 50px;
-			    }
-
-	    	/*TOPMENUここから*/
-		        nav {
-		            list-style: none;
-		            overflow: hidden;
-		        }
-
-		        nav a{
-		        	text-decoration: none;
-		        	color: white;
-		        }
-
-		        .top-nav{
-		        	position: sticky;
-		        	top: 0px;
-		        }
-
-		        .topnav-menu, .topnav-menu-list {
-		        list-style: none;
-		        padding-left: 0;
-		        margin: 0;
-		        }
-
-		        .topnav-menu-list, .topnav-menu-col {
-		        -webkit-transition: 0.25s ease-in;
-		        -moz-transition: 0.25s ease-in;
-		        -ms-transition: 0.25s ease-in;
-		        -o-transition: 0.25s ease-in;
-		        transition: 0.25s ease-in;
-		        }
-
-		        .topnav-menu-content:hover + .topnav-menu-list, .topnav-menu-list:hover {
-		        opacity: 1;
-		        z-index: 1;
-		        }
-
-		        .topnav-menu {
-		        color: #f8f8f8;
-		        background: #585858;
-		        }
-		        .topnav-menu:after {
-		        content: "";
-		        clear: both;
-		        display: block;
-		        }
-		        .topnav-menu-case {
-		        float: left;
-		        padding-left: 15px;
-		        padding-right: 15px;
-		        }
-		        .topnav-menu-case:hover .topnav-menu-col {
-		        color: #507ea4;
-		        }
-		        .topnav-menu-col {
-		        padding: 0.5em 0.8em;
-		        cursor: default;
-		        }
-		        .topnav-menu-list {
-		        opacity: 0;
-		        z-index: -1;
-		        position: absolute;
-		        border-top: 1px solid #666;
-		        width: 10em;
-		        background: #585858;
-		        -webkit-box-shadow: 0 1px 4px -2px #666;
-		        -moz-box-shadow: 0 1px 4px -2px #666;
-		        box-shadow: 0 1px 4px -2px #666;
-		        }
-		        .topnav-menu-content {
-		        padding: 0.3em 0.5em;
-		        cursor: pointer;
-		        }
-		        .topnav-menu-content a{
-		            color:white;
-		        }
-		        .topnav-menu-content:hover {
-		        background: #507ea4;
-		        }
-		        .sp-nav{
-		        	display: none;
-		        }
-		        #select{
-		        	width: 100%;
-				    background: #333;
-				    color: white;
-				    padding: 15px;
-				    font-size: 100%;
-		        }
-		        @media screen and (max-width: 768px){
-		        	.sp-nav{
-		        		width:100%;
-		        		display: block!important;
-		        		position: sticky;
-		        		top: 0;
-		        	}
-		        	.top-nav{
-		        		display: none!important;
-		        	}
-		        }
-	    	/*TOPMENUここまで(あとで書き換える)*/
-    	/*--------//header--------*/
-    /*コンテンツここから*/
-	    #contents{
-	    	/*min-height:1000px;*/
-	    	margin: 0 auto;
-	    	margin-bottom: 100px;
-	    	width: 70%;
-	    	height: 100%;
-	    	overflow: hidden;
-	    }
-
-	        /*見出し*/
-	        .md{
-	        	padding-top: 15px;
-	        }
-
-	        /*動作確認用余白*/
-	        #yohaku{
-	            height: 200px;
-	        }
-	        
-	        /*アクセスカウンタークレジット*/
-	        .credit{
-	        	font-size: 8px;
-	        }
-
-	        /*サイドバー内Twitter*/
-	        #twitter-tl{
-	            width:250px;
-	        }
-	        /*もしかしたら実装するかもしれないTOPへ戻るボタン*/
-	        #gotop{
-	        	position: fixed;
-	        	bottom: 50px;
-	        	right: 20px;
-	        	display: block;
-	        }
-	        /*----Table----*/
-		        /*メンバー表*/
-		        table.membar {
-					border-collapse: collapse;
-					text-align: left;
-					line-height: 1.5;
-					border: 1px solid #ccc;
-					width: 100%;
-				}
-				table.membar thead {
-					border-right: 1px solid #ccc;
-					border-left: 1px solid #ccc;
-					background: #333;
-				}
-				table.membar thead th {
-					padding: 10px;
-					font-weight: bold;
-					vertical-align: top;
-					color: #fff;
-				}
-				table.membar tbody th {
-					width: 150px;
-					padding: 10px;
-					font-weight: bold;
-					vertical-align: top;
-					border-bottom: 1px solid #ccc;
-					background: #efefef;
-				}
-				table.membar td {
-					width: 350px;
-					padding: 10px;
-					vertical-align: top;
-					border-bottom: 1px solid #ccc;
-				}
-				.scroll{
-				overflow: auto;　　　　/*tableをスクロールさせる*/
-				white-space: nowrap;　　/*tableのセル内にある文字の折り返しを禁止*/
-				}
-				.scroll::-webkit-scrollbar{　　/*tableにスクロールバーを追加*/
-				 height: 5px;
-				}
-				.scroll::-webkit-scrollbar-track{　　/*tableにスクロールバーを追加*/
-				 background: #F1F1F1;
-				}
-				.scroll::-webkit-scrollbar-thumb {　　/*tableにスクロールバーを追加*/
-				 background: #BCBCBC;
-				}
-			/*----//Table----*/
-			.rule{
-				list-style-type: decimal;/*li属性の・を算用数字に*/
-			}
-			@media screen and (max-width: 1024px){ /*1024pxで分岐*/
-				#twitter-tl{
-					width: auto;
-					max-width: 500px;
-				}
-				.md{
-					padding-top: 40px;
-				}
-			}
-	/*コンテンツここまで*/
-	    /*全般ここから*/
-	    	p{
-	            font-size: 14px;
-	            color: #333;
-	        }
-
-	        a{
-	            color: orange;
-	        }
-
-	        h2{
-	        	margin-bottom: 15px;
-			    border-bottom: #000000 1px dotted;
-			    color: #000000;
-			    font-size: 18px;
-			    font-weight: normal;
-	        }
-
-	        /*各見出し1文字目拡大*/
-	        h2:first-letter {
-	  			font-size: 26px;
-			}
-
-	        #main{
-	            float: left;
-	            width: 70%;
-	        }
-	        #side{
-	            float: right;
-	        }
-	        #footer{
-	        	position: relative;
-	        	font-size: 75%;
-	        	text-align: center;
-	        	overflow: hidden;
-	        	background: gray;
-	        }
-	        @media screen and (max-width: 1024px){ /*1024pxで分岐*/
-	        	#main{
-	        		width: 100%;
-	        	}
-	        	#side{
-	        		float: left;
-	        		width: 100%;
-	        	}
-	        }
-	    /*全般ここまで*/
-        </style>
-        <script>
-        	//sp用サイドバー用スクリプト
-        	window.onload = function() {
-			    // select変更時
-			    document.getElementById('select').onchange = function() {
-			        // 遷移先URL取得
-			        var url = this.options[this.selectedIndex].value;
-			        // URLが取得できていればページ遷移
-			        if(url != '') {
-			            location.href = url;
-			        }
-			    };
-			};
-		</script>
+			<meta charset="UTF-8">
+			<meta lang="ja">
+			<meta name="author" content="DAFU">
+			<meta name="viewport" content="width=device-width">
+			<meta name="discription" content="自作パソコン部ですよ！">
+			<title>自作パソコン部</title>
+			<link rel="preload" as="style" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" onload="this.onload=null,this.rel='stylesheet'">
+			<link rel="preload" as="style" href="https://cdn.jsdelivr.net/gh/kikiriko200/8-Grid@v0.4/css/8grid.all.min.css" onload="this.onload=null,this.rel='stylesheet'">
+			<link rel="preload" as="style" href="https://unpkg.com/light-modal@1.1.0/dist/css/light-modal.min.css" onload="this.onload=null,this.rel='stylesheet'">
+			<noscript>
+				<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+				<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kikiriko200/8-Grid@v0.4/css/8grid.all.min.css">
+				<link rel="stylesheet" href="https://unpkg.com/light-modal@1.1.0/dist/css/light-modal.min.css">
+			</noscript>
+			<link rel="stylesheet" href="./css/style.min.css">
+			<link href="https://fonts.googleapis.com/css?family=Montserrat|Roboto" rel="stylesheet">
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
     </head>
     <body>
-    <!--ヘッダーここから-->
-        <div id="head">
-            <div class="title">
-                <h1>自作パソコン部</h1>
+		<!--背景/Codepen(https://codepen.io/cantelope/pen/RgYXmJ)-->
+		<canvas id="canvas"></canvas>
+		<!--タイトル部分-->
+		<div class="contents">
+			<div class="canvas-body">
+				<div class="card">
+					<div class="title">
+						<h1>ZisakuPC Club</h1>
+					</div>
+				</div>
+				<div class="menu">
+					<span class="menu-button">MENU</span>
+					<div class="menu-contents">
+						<div class="r">
+							<div class="col-2">
+								<div class="menu-child">
+									<a href="#about">About</a>
+								</div>
+							</div>
+							<div class="col-2">
+								<div class="menu-child">
+										<a href="#joinus">Join Us</a>
+								</div>
+							</div>
+							<div class="col-2">
+								<div class="menu-child">
+									<a href="#member">Member</a>
+								</div>
+							</div>
+							<div class="col-2">
+								<div class="menu-child">
+									Contact
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="share">
+					<div class="share-title">Share</div>
+					<div class="flex">
+							<a class="share_btn tw" href="https://twitter.com/intent/tweet?text=自作パソコン部%0a&url=https://zisakupcbu.tk/"" target="_blank" rel="nofollow">
+								<i class="fab fa-twitter"></i>
+							</a>
+							<a class="share_btn fb" href="https://www.facebook.com/sharer/sharer.php?u=https://zisakupcbu.tk/" target="_blank" rel="nofollow">
+								<i class="fab fa-facebook-f"></i>
+							</a>
+							<a class="share_btn ln" href="http://line.me/R/msg/text/?https://zisakupcbu.tk/" target="_blank" rel="nofollow">
+								LINE
+							</a>
+							<a class="share_btn htb" href="http://b.hatena.ne.jp/entry/https://zisakupcbu.tk" target="_blank" rel="nofollow">
+								B!
+							</a>
+					</div>
+				</div>
+				<div class="counter">
+					<div class="counter-title">
+						Counter
+					</div>
+					<div class="counter-body">
+						あなたは2015人目の訪問者です
+					</div>
+				</div>
+			</div>
+			<footer class="footer">
+				<div class="footer-inner">
+					<script type="text/javascript" src="https://cache1.value-domain.com/xa.j?site=jisapc.s1001.xrea.com"></script>
+					<div class="r">
+						<div class="col-8">
+							&copy; 自作パソコン部
+						</div>
+					</div>
+				</div>
+			</footer>
+		</div>
+		<!--モーダル-->
+		<div class="light-modal" id="about" role="dialog" aria-labelledby="light-modal-label" aria-hidden="false">
+        <div class="light-modal-content animated zoomInUp">
+            <!-- light modal header -->
+            <div class="light-modal-header">
+                <h3 class="light-modal-heading">About</h3>
+                <a href="#" class="light-modal-close-icon" aria-label="close">&times;</a>
+            </div>
+            <!-- light modal body -->
+            <div class="light-modal-body">
+              <h3>自作PC部とは</h3>
+							<p>
+								PCのことについて喋るDiscordグループです。
+								このようにHPを作ることもあります。
+							</p>
+            </div>
+            <!-- light modal footer -->
+            <div class="light-modal-footer">
+                <a href="#" class="light-modal-close-btn" aria-label="close">Close</a>
             </div>
         </div>
-            <nav class="top-nav">
-                    <ul class="topnav-menu">
-                            <li class="topnav-menu-case">
-                             	<div class="topnav-menu-content"><a href="#head">TOP</a></div>
-                              <!--子属性を使用する場合用
-                                <ul class="topnav-menu-list">
-                                <li class="topnav-menu-col">Menu 1-1</li>
-                                <li class="topnav-menu-col">Menu 1-2</li>
-                                <li class="topnav-menu-col">Menu 1-3</li>
-                              </ul>
-                              -->
-                            </li>
-
-                            <li class="topnav-menu-case">
-                            	<a href="#sec1"><div class="topnav-menu-content">About</div></a>
-                            </li>
-                            <li class="topnav-menu-case">
-                            	<a href="#sec2"><div class="topnav-menu-content">Join</div></a>
-                            </li>
-                            <li class="topnav-menu-case">
-                            	<a href="#sec3"><div class="topnav-menu-content">Member</div></a>
-                            </li>
-                            <li class="topnav-menu-case">
-                            	<a href="#sec4"><div class="topnav-menu-content">Rule</div></a>
-                            </li>
-                            <li class="topnav-menu-case">
-                            	<a href="#sec5"><div class="topnav-menu-content">Contact</div></a>
-                            </li>
-                    </ul>
-            </nav>
-            <nav class="sp-nav">
-            	<select id="select">
-            		<option>MENU</option>
-            		<option value="http://sandbox.starfree.jp/test.html">TOP</option>
-            		<option value="#sec1">About</option>
-            		<option value="#sec2">Join</option>
-            		<option value="#sec3">Member</option>
-            		<option value="#sec4">Rule</option>
-            		<option value="#sec5">Contact</option>
-            	</select>
-            </nav>
-        
-    <!-- ヘッダーここまで-->
-    <div id="contents">
-    	<!--メインカラムここから-->
-        <div id="main">
-	        <div id="sec1" class="md">
-	            <h2>About</h2>
-	            <p>
-	                この部は、自作er同士の情報交換を目的としたSkypeグループです。(現在Discord進出検討中)<br>
-
-	            </p>
-	        </div>
-	        <div id="sec2" class="md">
-	            <h2>Join</h2>
-	            <p>
-	                応募は応募フォームから行ってください。<br>
-	                応募フォーム→<a href="/form.php">こちら</a>
-	            </p>
-	        </div>
-	        <div id="sec3" class="md">
-	        	<h2>Member</h2>
-	        	<div class="scroll">
-	        	<table class="membar">
-	        		<thead>
-	        			<tr>
-	        				<th>
-	        					名前
-	        				</th>
-	        				<th>
-	        					Twitter ID
-	        				</th>
-	        				<th>
-	        					役職
-	        				</th>
-	        			</tr>
-	        		</thead>
-	        		<tbody>
-	        			<tr>
-	        				<th>
-	        					ecraftten
-	        				</th>
-	        				<td>
-	        					<a href="https://twitter.com/ecraftten" target="_blank">
-	        						@ecraftten
-	        					</a>
-	        				</td>
-	        				<td>
-	        					HP管理(ドメイン管理)・Twitter管理(Admin)
-	        				</td>
-	        			</tr>
-	        			<tr>
-	        				<th>
-	        					DAFU
-	        				</th>
-	        				<td>
-	        					<a href="https://twitter.com/kikiriko200" target="_blank">
-	        						@kikiriko200
-	        					</a>
-	        				</td>
-	        				<td>
-	        					HP作成補助(サーバー契約・HP作成)・Twitter管理補助(contributor)
-	        				</td>
-	        			</tr>
-	        		</tbody>
-	        	</table>
-	        	</div>
-	        </div>
-	        <div id="sec4" class="md">
-	        	<h2>Rule</h2>
-	        	<p>
-	        		自作パソコン部のルールです。<br>
-	        		快適に過ごすための最低限の規約であり、違反者には警告がされます。<br>
-	        		改善が見受けられない場合、退部もあります。
-	        	</p>
-	        	<ul class="rule">
-	        		<li>
-	        			暴言の禁止
-	        		</li>
-	        		<li>
-	        			荒らし行為の禁止
-	        		</li>
-	        		<li>
-	        			他の人の迷惑になる行為禁止
-	        		</li>
-	        		<li>
-	        			その他疑問があれば各自の判断で処理<br>
-	        			(但し処分に関する議論は公開上で行うこと)
-	        		</li>
-	        	</ul>
-	        </div>
-	        <div id="sec5" class="md">
-	        	<h2>Contact</h2>
-	        	<p>
-	        		質問などどうぞ。
-	        	</p>
-	        </div>
-
+		</div>
+		<div class="light-modal" id="joinus" role="dialog" aria-labelledby="light-modal-label" aria-hidden="false">
+        <div class="light-modal-content animated zoomInUp">
+            <!-- light modal header -->
+            <div class="light-modal-header">
+                <h3 class="light-modal-heading">About</h3>
+                <a href="#" class="light-modal-close-icon" aria-label="close">&times;</a>
+            </div>
+            <!-- light modal body -->
+            <div class="light-modal-body">
+              <h3>応募</h3>
+							<p>
+								応募はこちらのフォームからお願いします。
+							</p>
+							<form method="POST" action="./">
+								<p>名前 <br><input type="text" name="personal_name" required></p>
+								<p>Twitter ID <br><input type="text" name="twitter" pattern="[0-9a-zA-z_@]" required></p>
+								<p>discordアカウントを持っていますか?</p>
+								<p>
+									<input type="radio" name="discord" value="はい">はい
+									<input type="radio" name="discord" value="いいえ">いいえ
+								</p>
+								<input type="submit" class="light-modal-close-btn" name="btn1" value="投稿する" style="padding: 10px 20px">
+							</form>
+            </div>
+            <!-- light modal footer -->
+            <div class="light-modal-footer">
+                <a href="#" class="light-modal-close-btn" aria-label="close">Close</a>
+            </div>
         </div>
-        <!--メインカラムここまで-->
-        <!--サイドバーここから-->
-        <div id="side">
-	        <h2>アクセスカウンター</h2>
-	        <!--アクセスカウンターここから-->
-	        <table border="0" cellspacing="0" cellpadding="0">
-	        	<tr>
-	        		<td align="center">
-	        			<a href="http://www.rays-counter.com/">
-	        				<img src="http://www.rays-counter.com/d402_f6_022/5a953bda4e9e5/" alt="アクセスカウンター" border="0">
-	        			</a>
-	        		</td>
-	        	</tr>
-	        	<tr>
-	        		<td align="center" class="credit">
-	        			RAYS-COUNTER.com
-	        		</td>
-	        	</tr>
-	        </table>
-	        <!--アクセスカウンターここまで-->
-
-	        <h2>Twitter</h2>
-	        <!-- 埋め込みスクリプト-->
-	        <div id="twitter-tl">
-	        <a class="twitter-timeline" href="https://twitter.com/zisakupcbu?ref_src=twsrc%5Etfw">Tweets by zisakupcbu</a>
-	        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-	        </div>
-	        <!-- //埋め込みスクリプト-->
-        </div>
-        <!--サイドバーここまで-->
-    </div>
-    <!--ボタン部・実装廃止-->
-    <!--
-    <div id="gotop">
-    	<a href="#head">
-    		<span class="gotop-frame">
-    			<span class="gotop-text">
-    				↑
-    			</span>
-    		</span>
-    	</a>
-    </div>
-	-->
-    <div id="footer">
-       	<footer>
-       		<p>&copy;自作パソコン部</p>
-<script type="text/javascript" src="https://cache1.value-domain.com/xa.j?site=jisapc.s1001.xrea.com"></script>
-        </footer>
-    </div>
-    </body>
-</html>
+		</div>
+		<div class="light-modal" id="member" role="dialog" aria-labelledby="light-modal-label" aria-hidden="false">
+			<div class="light-modal-content animated zoomInUp">
+				<!-- light modal header -->
+				<div class="light-modal-header">
+						<h3 class="light-modal-heading">Member</h3>
+						<a href="#" class="light-modal-close-icon" aria-label="close">&times;</a>
+				</div>
+				<!-- light modal body -->
+				<div class="light-modal-body">
+					<h3>メンバー</h3>
+					<p>
+						自作パソコン部のメンバーです。
+					</p>
+					<div class="scroll">
+							<table class="member">
+								<thead>
+									<tr>
+										<th>名前</th>
+										<th>Twitter ID</th>
+										<th>役職</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<th>ecraftten</th>
+										<td><a href="https://twitter.com/ecraftten" target="_blank">@ecraftten</a></td>
+										<td>HP管理(ドメイン管理)・Twitter管理(Admin)</td>
+									</tr>
+									<tr>
+										<th>DAFU</th>
+										<td><a href="https://twitter.com/kikiriko200" target="_blank">@kikiriko200</a></td>
+										<td>HP作成・Twitter管理補助(contributor)</td>
+									</tr>
+									<tr>
+										<th>pc0123</th>
+										<td><a href="https://twitter.com/pc_0123" target="_blank">@pc_0123</a></td>
+										<td>サーバー管理</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+				</div>
+				<!-- light modal footer -->
+				<div class="light-modal-footer">
+						<a href="#" class="light-modal-close-btn" aria-label="close">Close</a>
+				</div>
+			</div>
+		</div>
+		<script src="./js/canvas.js"></script>
+	</body>
